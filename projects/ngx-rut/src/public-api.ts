@@ -1,9 +1,9 @@
 /*
- * Public API Surface of ng9-rut
+ * Public API Surface of ngx-rut
  */
 
-export * from './lib/ng9-rut.service';
-export * from './lib/ng9-rut.module';
+export * from './lib/ngx-rut.service';
+export * from './lib/ngx-rut.module';
 export * from './lib/rut-value-accessor';
 export * from './lib/rut.directive';
 export * from './lib/rut.pipe';

@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { Ng9RutService } from './ng9-rut.service';
+import { NgxRutService } from './ngx-rut.service';
 
-describe('Ng9RutService', () => {
-  let service: Ng9RutService;
+describe('NgxRutService', () => {
+  let service: NgxRutService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(Ng9RutService);
+    service = TestBed.inject(NgxRutService);
   });
 
   it('should be created', () => {

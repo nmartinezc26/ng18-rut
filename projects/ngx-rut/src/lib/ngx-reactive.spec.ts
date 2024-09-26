@@ -1,11 +1,11 @@
 import { Component, DebugElement } from '@angular/core';
 import { By } from '@angular/platform-browser';
-import { ReactiveFormsModule, FormsModule, FormControl, NgModel, FormBuilder, Validators, FormGroup } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule, FormControl, NgModel, UntypedFormBuilder, Validators, UntypedFormGroup } from '@angular/forms';
 import { TestBed, ComponentFixture } from '@angular/core/testing';
 
 import { RutValidator } from './rut.validator';
 import { newEvent } from '../testing';
-import { Ng9RutModule } from './ng9-rut.module';
+import { NgxRutModule } from './ngx-rut.module';
 
 @Component({
     template: `
@@ -16,11 +16,11 @@ import { Ng9RutModule } from './ng9-rut.module';
     `,
 })
 class TestReactiveFormComponent {
-    public reactiveForm: FormGroup;
+    public reactiveForm: UntypedFormGroup;
     public user: any = {
         rut: '',
     };
-    constructor(fb: FormBuilder, rutValidator: RutValidator) {
+    constructor(fb: UntypedFormBuilder, rutValidator: RutValidator) {
         this.reactiveForm = fb.group({
             rut: ['30972198', [Validators.required, rutValidator]]
         });
@@ -36,7 +36,7 @@ describe('RutValidator: ReactiveForms', () => {
     beforeEach(() => {
         TestBed.configureTestingModule({
             declarations: [TestReactiveFormComponent],
-            imports: [FormsModule, ReactiveFormsModule, Ng9RutModule],
+            imports: [FormsModule, ReactiveFormsModule, NgxRutModule],
         }).compileComponents().then(() => {
             fixture = TestBed.createComponent(TestReactiveFormComponent);
             fixture.detectChanges();
