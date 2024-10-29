@@ -1,15 +1,15 @@
 {
-  "name": "ngx-rut",
-  "version": "0.0.2",
+  "name": "ng2-rut",
+  "version": "10.0.0",
   "dependencies": {
     "tslib": "^2.7.0"
   },
-  "main": "bundles/ngx-rut.umd.js",
-  "module": "fesm2015/ngx-rut.js",
-  "es2015": "fesm2015/ngx-rut.js",
-  "esm2015": "esm2015/ngx-rut.js",
-  "fesm2015": "fesm2015/ngx-rut.js",
-  "typings": "ngx-rut.d.ts",
+  "main": "bundles/ng2-rut.umd.js",
+  "module": "fesm2015/ng2-rut.js",
+  "es2015": "fesm2015/ng2-rut.js",
+  "esm2015": "esm2015/ng2-rut.js",
+  "fesm2015": "fesm2015/ng2-rut.js",
+  "typings": "ng2-rut.d.ts",
   "sideEffects": false,
   "scripts": {
     "prepublishOnly": "node --eval \"console.error('ERROR: Trying to publish a package that has been compiled by Ivy. This is not allowed.\\nPlease delete and rebuild the package, without compiling with Ivy, before attempting to publish.\\n')\" && exit 1"

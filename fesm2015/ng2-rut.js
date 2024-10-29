@@ -217,7 +217,7 @@ Ng2Rut.ɵinj = ɵɵdefineInjector({ factory: function Ng2Rut_Factory(t) { return
     }], null, null); })();
 
 /*
- * Public API Surface of ngx-rut
+ * Public API Surface of ng2-rut
  */
 
 /**
@@ -225,4 +225,4 @@ Ng2Rut.ɵinj = ɵɵdefineInjector({ factory: function Ng2Rut_Factory(t) { return
  */
 
 export { Ng2Rut, NgxRutModule, NgxRutService, RutDirective, RutPipe, RutValidator, RutValueAccessor, rutClean, rutFormat, rutValidate, validateRutFactory };
-//# sourceMappingURL=ngx-rut.js.map
+//# sourceMappingURL=ng2-rut.js.map

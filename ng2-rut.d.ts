@@ -1,6 +1,6 @@
 /**
  * Generated bundle index. Do not edit.
  */
-/// <amd-module name="ngx-rut" />
+/// <amd-module name="ng2-rut" />
 export * from './public-api';
-//# sourceMappingURL=ngx-rut.d.ts.map
+//# sourceMappingURL=ng2-rut.d.ts.map

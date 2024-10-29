@@ -1,7 +1,7 @@
 (function (global, factory) {
     typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core'), require('@angular/forms')) :
-    typeof define === 'function' && define.amd ? define('ngx-rut', ['exports', '@angular/core', '@angular/forms'], factory) :
-    (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global['ngx-rut'] = {}, global.ng.core, global.ng.forms));
+    typeof define === 'function' && define.amd ? define('ng2-rut', ['exports', '@angular/core', '@angular/forms'], factory) :
+    (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global['ng2-rut'] = {}, global.ng.core, global.ng.forms));
 }(this, (function (exports, i0, forms) { 'use strict';
 
     var NgxRutService = /** @class */ (function () {
@@ -254,7 +254,7 @@
     })();
 
     /*
-     * Public API Surface of ngx-rut
+     * Public API Surface of ng2-rut
      */
 
     /**
@@ -276,4 +276,4 @@
     Object.defineProperty(exports, '__esModule', { value: true });
 
 })));
-//# sourceMappingURL=ngx-rut.umd.js.map
+//# sourceMappingURL=ng2-rut.umd.js.map
