@@ -1,105 +1,24 @@
-Angular RUT
-=============
+# NgxRut
 
-Fork de https://github.com/platanus/ng-rut para funcionar bajo las nuevas librerias de Angular debido a librerías deprecadas.
+This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.1.0.
 
-Angular library with several components to handle [Chilean RUT](https://en.wikipedia.org/wiki/National_identification_number#Chile) validation, cleaning and formatting.
+## Code scaffolding
 
-## Installation
+Run `ng generate component component-name --project ngz-rut` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project ngx-rut`.
+> Note: Don't forget to add `--project ngx-rut` or else it will be added to the default project in your `angular.json` file. 
 
-```bash
-yarn add ngx-rut
-# or
-npm install ngx-rut --save
-```
+## Build
 
-## Usage
+Run `ng build ngx-rut` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-### Set-up:
+## Publishing
 
-The easiest way to use this library is to import Ng2Rut in your app's main module.
+After building your library with `ng build ngx-rut`, go to the dist folder `cd dist/ngx-rut` and run `npm publish`.
 
-```typescript
-import { NgModule } from '@angular/core';
-import { NgxRutModule } from 'ngx-rut';
-import { BrowserModule } from '@angular/platform-browser';
+## Running unit tests
 
-@NgModule({
-  ...
-  imports: [
-    BrowserModule,
-    NgxRutModule
-  ],
-})
-class DemoAppModule { }
-```
+Run `ng test ngx-rut` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-See `./demo` folder for a fully working example.
+## Further help
 
-### Using it:
-
-ngx-rut exposes multiple features that can be used to perform input validation and formatting. Probably you want to use one of the following:
-
-- `RutValidator`: Exposes the `validateRut` directive (to attach to models or inputs) and the RutValidator class to be used as `Validator` on reactive forms.
-- `RutPipe`: Exposes the `RutPipe` pipe to format rut numbers on templates
-- `RutDirective`: Exposes the `formatRut` directive to format RUT inputs.
-
-#### RutValidator
-
-##### Reactive forms
-
-```typescript
-import { FormGroup, FormBuilder, Validators, FormControl } from '@angular/forms';
-import { RutValidator } from 'ngx-rut';
-export class DemoAppComponent {
-  constructor (fb: FormBuilder, rutValidator: RutValidator) {
-    this.reactiveForm = fb.group({
-      rut: ['30972198', [Validators.required, rutValidator]]
-    });
-  }
-}
-
-```
-
-##### Template Form
-```html
-<input [(ngModel)]="user.rut" name="rut" validateRut required>
-```
-
-#### RutPipe
-
-```html
-{{ user.rut }}
-<!-- 30972198 -->
-{{ user.rut | rut }}
-<!-- 3.097.219-8 -->
-```
-
-#### formatRut (Directive)
-```html
-<input [(ngModel)]="user.rut" name="rut" formatRut required>
-<!--
-(on blur)
-3.097.219-8
-
-(on focus)
-30972198
--->
-```
-
-## Contributing
-
-1. Fork it
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create new Pull Request
-
-## Credits
-
-Esta lib fue actualizada en base al proyecto de los chicos de platanus.
-https://github.com/platanus/ng2-rut
-
-## License
-
-Angular 2 RUT is © 2016 Platanus, spa. It is free software and may be redistributed under the terms specified in the LICENSE file.
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
