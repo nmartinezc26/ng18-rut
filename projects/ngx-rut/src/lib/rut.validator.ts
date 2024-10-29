@@ -1,9 +1,9 @@
 import { Directive, forwardRef } from '@angular/core';
-import { NG_VALIDATORS, UntypedFormControl } from '@angular/forms';
+import { NG_VALIDATORS, FormControl } from '@angular/forms';
 import { rutValidate } from './rut-helpers';
 
 export function validateRutFactory(rutValidate: Function) {
-  return (c: UntypedFormControl) => {    
+  return (c: FormControl) => {    
     if (!c.value) {
       return null;
     }
@@ -24,7 +24,7 @@ export class RutValidator {
     this.validator = validateRutFactory(rutValidate);
   }
   
-  public validate(c: UntypedFormControl) {
+  public validate(c: FormControl) {
     return this.validator(c);
   }
 }

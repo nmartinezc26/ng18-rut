@@ -1,6 +1,6 @@
 {
   "name": "ngx-rut",
-  "version": "0.0.1",
+  "version": "10.0.0",
   "dependencies": {
     "tslib": "^2.7.0"
   }
